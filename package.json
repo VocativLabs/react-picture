@@ -9,7 +9,7 @@
     "build:umd": "webpack lib/index.js dist/react-picture.js && NODE_ENV=production webpack lib/index.js dist/react-picture.min.js",
     "test": "lab -S -L -T node_modules/lab-babel -t 70",
     "test-cov-html": "lab -c -S -T node_modules/lab-babel -r html -o coverage.html",
-    "prepublish": "npm run test && npm run clean && npm run build && npm run build:umd"
+    "postinstall": "npm run test && npm run clean && npm run build && npm run build:umd"
   },
   "repository": {
     "type": "git",
